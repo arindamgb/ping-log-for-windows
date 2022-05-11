@@ -1,0 +1,27 @@
+==================
+How to use:
+==================
+
+Download:
+git clone https://github.com/arindamgb/ping-log-for-windows.git
+
+Run:
+1. Run pinglog.bat as Administrator
+2. Type the desired ip/domain
+3. Repeat 1 & 2 to add another host
+4. All Logs will be stored in the same directory with different names for multiple hosts
+
+Monitor:
+1. Open PowerShell and navigate to the log directory
+
+cd path\of\log\directory
+
+2. Type below command (It works like 'tail -f <filename>' in Linux)
+
+Get-content -Path <log_file_name> -Wait
+
+Example:
+Get-content -Path .\Log_8.8.8.8.log -Wait
+
+
+Thanks!
